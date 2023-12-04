@@ -1,5 +1,6 @@
 import React from "react";
 import BotsPage from "./BotsPage";
+// Add these import statements at the top of your files//
 
 function App() {
   return (

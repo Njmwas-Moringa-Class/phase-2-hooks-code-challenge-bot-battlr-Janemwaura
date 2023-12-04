@@ -1,4 +1,7 @@
 import React from "react";
+// Add these import statements at the top of your files
+
+
 
 const botTypeClasses = {
   Assault: "icon military",

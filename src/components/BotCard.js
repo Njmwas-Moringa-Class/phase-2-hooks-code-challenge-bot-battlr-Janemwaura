@@ -1,4 +1,6 @@
 import React from "react";
+// Add these import statements at the top of your files
+
 
 const botTypeClasses = {
   Assault: "icon military",
@@ -9,7 +11,7 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotCard({ bot }) {
+function BotCard({ bot, clickEvent, deletebot }) {
   return (
     <div className="ui column">
       <div
@@ -47,9 +49,11 @@ function BotCard({ bot }) {
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini red button"
-                onClick={() =>
-                  console.log("add code to connect event listener")
-                }
+                onClick={(event) => {
+                  event.stopPropagation();
+                  deletebot(bot);
+                }}
+                 
               >
                 x
               </button>
